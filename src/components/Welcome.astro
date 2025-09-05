@@ -6,7 +6,7 @@ import background from '../assets/background.svg';
 <div id="container">
   <img id="background" src={background.src} alt="" fetchpriority="high" />
   <main>
-    <section id="hero">
+    <section id="hero" class="flex items-center bg-red-500 px-4 text-white">
       <a href="https://astro.build"
         ><img
           src={astroLogo.src}
@@ -19,7 +19,7 @@ import background from '../assets/background.svg';
         To get started, open the <code><pre>src/pages</pre></code> directory in your
         project.
       </h1>
-      <section id="links" class="bg-amber-50 text-2xl flex justify-around">
+      <section id="links" class="flex justify-around bg-amber-50 text-2xl">
         <a class="button" href="https://docs.astro.build">Read our docs</a>
         <a href="https://astro.build/chat"
           >Join our Discord <svg

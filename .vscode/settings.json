@@ -1,23 +1,68 @@
 {
-  "astro.format.enable": false,
+  // 🔧 Formatowanie
+  "astro.format.enable": false, // wyłącz wbudowany formatter Astro (używamy Prettiera)
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
 
-  "prettier.documentSelectors": ["**/*.astro"],
+  // Prettier
+  "prettier.documentSelectors": [
+    "**/*.astro",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx"
+  ],
   "prettier.requireConfig": false,
 
+  // Plik → język
   "files.associations": {
     "*.astro": "astro"
   },
 
+  // 🌐 Specyficzne formatery
   "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // ⚡ ESLint integracja
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "astro"
+  ],
+
+  // 🎨 Tailwind CSS IntelliSense
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html",
+    "astro": "html",
+    "typescriptreact": "javascript"
+  },
+  "tailwindCSS.experimental.configFile": "./tailwind.config.js",
+
+  // 📚 TypeScript
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.preferences.importModuleSpecifier": "relative",
+
+  // 🧹 Inne ułatwienia
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true
 }
